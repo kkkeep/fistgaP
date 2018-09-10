@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <Button
+        android:id="@+id/login_register_btn_done"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="@dimen/h_px_76"
+        android:background="@drawable/login_button_selector"
+        android:padding="@dimen/h_px_22"
+        android:text="@string/login_register_done"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/w_px_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_register_etv_nickname" />
+
+
+    <ImageView
+        android:id="@+id/login_register_iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="@dimen/w_px_30"
+        android:background="@drawable/login_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/login_register_iv_pic"
+        android:layout_width="@dimen/w_px_141"
+        android:layout_height="@dimen/w_px_141"
+        android:layout_marginTop="@dimen/h_px_144"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_default_user_head_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/login_register_tv_set_head_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_px_20"
+        android:text="@string/login_set_head_pic"
+        android:textColor="@color/text_bg_color_a"
+        android:textSize="@dimen/w_px_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_register_iv_pic" />
+
+    <EditText
+        android:id="@+id/login_register_etv_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/w_px_60"
+        android:layout_marginLeft="@dimen/w_px_60"
+        android:layout_marginRight="@dimen/w_px_60"
+        android:layout_marginStart="@dimen/w_px_60"
+        android:layout_marginTop="@dimen/h_px_72"
+        android:background="@android:color/transparent"
+        android:hint="@string/login_register_input_your_nickname"
+        android:textColor="@color/text_bg_color_b"
+        android:textSize="@dimen/w_px_28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_register_tv_set_head_pic" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        style="@style/Firstga.split_line_horizontal"
+        android:layout_marginEnd="@dimen/w_px_60"
+        android:layout_marginLeft="@dimen/w_px_60"
+        android:layout_marginRight="@dimen/w_px_60"
+        android:layout_marginStart="@dimen/w_px_60"
+        android:layout_marginTop="@dimen/h_px_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_register_etv_nickname" />
+
+
+    <FrameLayout
+        android:id="@+id/login_register_edite_pic"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/login_register_btn_edite_pic_ok"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/login_register_btn_edite_pic_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/login_register_btn_edite_pic_cancle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_register_edite_pic" />
+
+    <Button
+        android:id="@+id/login_register_btn_edite_pic_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/login_register_btn_edite_pic_ok" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="login_register_btn_edite_pic_ok,login_register_btn_edite_pic_cancle,login_register_edite_pic" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="login_register_iv_pic,login_register_iv_close,login_register_btn_done,login_register_tv_set_head_pic,imageView4,login_register_etv_nickname" />
+
+</android.support.constraint.ConstraintLayout>

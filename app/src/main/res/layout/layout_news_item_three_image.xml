@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/w_px_30"
+    android:paddingLeft="@dimen/w_px_30"
+    android:paddingRight="@dimen/w_px_30"
+    android:paddingStart="@dimen/w_px_30">
+
+
+    <TextView
+        android:id="@+id/news_item_title"
+        style="@style/Firstga.news_item_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="@dimen/h_px_40"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="你好速度熟练度附近"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.jy.fistga.view.NewItemBottomInfoView
+        android:id="@+id/news_item_bottom_info"
+        style="@style/Firstga.news_item_bottom_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/h_px_40"
+        android:layout_marginTop="@dimen/h_px_30"
+        android:drawableEnd="@drawable/icon_news_close"
+        android:drawableLeft="@drawable/icon_news_top"
+        android:drawableRight="@drawable/icon_news_close"
+        android:drawableStart="@drawable/icon_news_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/news_item_fist_img" />
+
+    <ImageView
+        android:id="@+id/news_item_fist_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/h_px_30"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="h,1.5:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/news_item_second_img"
+        app:layout_constraintTop_toBottomOf="@+id/news_item_title"
+        app:srcCompat="@drawable/news_item_three_image_default" />
+
+    <ImageView
+        android:id="@+id/news_item_second_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="h,1.5:1"
+        app:layout_constraintEnd_toStartOf="@+id/news_item_third_img"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/news_item_fist_img"
+        app:layout_constraintTop_toTopOf="@+id/news_item_fist_img"
+        app:srcCompat="@drawable/news_item_three_image_default" />
+
+    <ImageView
+        android:id="@+id/news_item_third_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="h,1.5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/news_item_second_img"
+        app:layout_constraintTop_toTopOf="@+id/news_item_second_img"
+        app:srcCompat="@drawable/news_item_three_image_default" />
+
+</android.support.constraint.ConstraintLayout>

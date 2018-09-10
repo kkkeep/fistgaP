@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_fragment_container"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/main_bottom_split_line"
+        android:layout_height="0dp"/>
+
+    <ImageView
+        android:id="@+id/main_bottom_split_line"
+        style="@style/Firstga.split_line_horizontal"
+        app:layout_constraintBottom_toTopOf="@id/main_bottom_tab_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <RadioGroup
+        android:id="@+id/main_bottom_tab_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingLeft="@dimen/w_px_75"
+        android:paddingRight="@dimen/w_px_75"
+        android:paddingTop="@dimen/h_px_12"
+        android:paddingBottom="@dimen/h_px_10"
+        android:layout_height="wrap_content">
+
+        
+        
+        <RadioButton
+            android:id="@+id/main_bottom_tab_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_main_bottom_tab_news"
+            android:button="@null"
+            android:drawablePadding="@dimen/h_px_5"
+            android:drawableTop="@drawable/main_bottom_tab_news"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:enabled="false"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/main_bottom_tab_topics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_main_bottom_tab_topics"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:drawablePadding="@dimen/h_px_5"
+            android:drawableTop="@drawable/main_bottom_tab_topics"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:enabled="false"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/main_bottom_tab_moments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_main_bottom_tab_moments"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:drawablePadding="@dimen/h_px_5"
+            android:drawableTop="@drawable/main_bottom_tab_moments"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:enabled="false"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            />
+        <RadioButton
+            android:id="@+id/main_bottom_tab_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_main_bottom_tab_me"
+            android:button="@null"
+            android:drawablePadding="@dimen/h_px_5"
+            android:drawableTop="@drawable/main_bottom_tab_me"
+            />
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>

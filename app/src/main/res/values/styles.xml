@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionButtonStyle">@style/Firstga.ActionBarButtonStyle</item>
+    </style>
+
+    <style name="Firstga"/>
+
+
+    <style name="Firstga.split_line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/horizontal_split_line_style_1</item>
+    </style>
+
+    <style name="Firstga.split_line_vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/vertical_split_line_style_1</item>
+    </style>
+    <style name="Firstga.news_tab_text">
+        <item name="android:textSize">@dimen/h_px_32</item>
+    </style>
+
+
+    <style name="Firstga.news_item_text_style">
+        <item name="android:textSize">@dimen/w_px_36</item>
+        <item name="android:textColor">@color/text_bg_color_a</item>
+    </style>
+    <style name="Firstga.news_item_bottom_text_style">
+        <item name="android:textSize">@dimen/w_px_24</item>
+        <item name="android:textColor">@color/text_bg_color_i</item>
+    </style>
+</resources>

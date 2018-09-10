@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+       <!-- <item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+    <style name="Firstga.ActionBarButtonStyle" >
+        <item name="android:paddingEnd">@dimen/w_px_30</item>
+
+    </style>
+
+</resources>

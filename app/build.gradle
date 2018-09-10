@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+apply plugin: deps.greendao.plugin
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.jy.fistga"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+greendao{
+    schemaVersion 2 // 数据库版本号
+    daoPackage  'com.jy.fistga.data.source.local.greendao'//greenDao 自动生成的代码保存的包名
+    targetGenDir   'src/main/java' //自动生成的代码存储的路径，默认是 build/generated/source/greendao.
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation deps.support.app_compat
+    implementation deps.support.constraintlayout
+    implementation deps.support.multidex
+    implementation deps.support.annotations
+    implementation deps.support.recyclerview
+    implementation deps.support.design
+    implementation deps.rxjava2.rxjava
+    implementation deps.rxjava2.rxAndroid
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.retrofit_converter_gson
+    implementation deps.retrofit.retrofit_adapter_rxjava2
+    implementation deps.retrofit.retrofit_rxlifecycle_components
+    implementation deps.okhttp3.okhttp3
+    implementation deps.okhttp3.logging_interceptor
+    implementation deps.greendao.greendao
+    implementation deps.glide.glide
+    annotationProcessor deps.glide.compiler
+}

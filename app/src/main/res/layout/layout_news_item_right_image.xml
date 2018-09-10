@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/w_px_30"
+    android:paddingLeft="@dimen/w_px_30"
+    android:paddingRight="@dimen/w_px_30"
+    android:paddingStart="@dimen/w_px_30">
+
+    <TextView
+        android:id="@+id/news_item_title"
+        style="@style/Firstga.news_item_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/w_px_40"
+        android:layout_marginRight="@dimen/w_px_40"
+        android:layout_marginTop="@dimen/h_px_40"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="你好速度熟练度附近"
+        app:layout_constraintEnd_toStartOf="@+id/news_item_right_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.jy.fistga.view.NewItemBottomInfoView
+        android:id="@+id/news_item_bottom_info"
+        style="@style/Firstga.news_item_bottom_text_style"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="@dimen/h_px_40"
+        android:layout_marginTop="@dimen/h_px_30"
+        android:drawableEnd="@drawable/icon_news_close"
+        android:drawableLeft="@drawable/icon_news_top"
+        android:drawableRight="@drawable/icon_news_close"
+        android:drawableStart="@drawable/icon_news_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/barrier2" />
+
+    <ImageView
+        android:id="@+id/news_item_right_img"
+        android:layout_width="@dimen/w_px_260"
+        android:layout_height="@dimen/h_px_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@+id/news_item_title"
+        app:srcCompat="@drawable/news_item_right_image_default" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="news_item_title,news_item_right_img"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

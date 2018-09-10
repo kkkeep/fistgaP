@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:context=".MainActivity">
+
+    <!--toolbar minHeight = layout_height 时 左边的返回icon 和右边的 menu icon 才能居中-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_news_toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/text_bg_color_g"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title=" "
+        android:layout_height="?android:attr/actionBarSize"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/text_bg_color_white"
+            android:textSize="@dimen/w_px_36"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/main_news_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="-1dp"
+        android:paddingBottom="-1dp"
+        android:layout_marginLeft="@dimen/h_px_30"
+        android:layout_marginStart="@dimen/h_px_30"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_news_toolbar"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorTranslucent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="6dp"
+        app:tabPaddingStart="6dp"
+        app:tabMinWidth="0dp"
+        app:tabMaxWidth="0dp"
+        app:tabSelectedTextColor="@color/text_bg_color_h"
+        app:tabTextAppearance="@style/Firstga.news_tab_text"
+        app:tabTextColor="@color/text_bg_color_a" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/main_news_tab"
+        app:layout_constraintBottom_toBottomOf="@+id/main_news_tab"
+        app:layout_constraintEnd_toStartOf="@id/main_news_channel_edit"
+        android:layout_marginRight="@dimen/w_px_10"
+        android:background="@drawable/main_news_tab_split_edit"
+        android:layout_marginEnd="@dimen/w_px_10"
+        />
+    <ImageView
+        android:id="@+id/main_news_channel_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_channel_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/w_px_30"
+        app:layout_constraintTop_toTopOf="@+id/main_news_tab"
+        app:layout_constraintBottom_toBottomOf="@+id/main_news_tab"
+        android:layout_marginEnd="@dimen/w_px_30" />
+
+    <ImageView
+        android:id="@+id/main_news_split_line"
+        style="@style/Firstga.split_line_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_news_tab"
+       />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_news_viewpager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_news_split_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+
+    </android.support.v4.view.ViewPager>
+
+
+</android.support.constraint.ConstraintLayout>
